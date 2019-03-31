@@ -1,0 +1,64 @@
+.main-block {
+    background: linear-gradient(90deg, #000428 0%, #00346d 100%);
+    color: #FFFFFF;
+    padding: 5rem 2rem 2rem 2rem;
+    height: 100vh;
+    // background-image: url('../../../../assets/online-shoping.jpg')
+}
+
+.main-block {
+    h3,
+    h1 {
+        color: #FFFFFF;
+    }
+    .content {
+        margin-top: 3rem;
+    }
+}
+
+#price-block {
+    .card {
+        box-shadow: 1px 1px 10px 0px #dfe3eb;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+    .card:hover {
+        box-shadow: 1px 13px 9px 0px #dfe3eb;
+    }
+}
+
+#explore-list {
+    .explore-items {
+        margin-top: 3rem;
+    }
+}
+
+#kiranaChain-footer {
+    padding: 1rem 0rem;
+    background: rgb(240, 242, 247);
+    .socialIcons {
+        margin-top: 1rem;
+        img {
+            height: 2rem;
+            width: 2rem;
+            margin-left: 40px;
+        }
+    }
+}
+
+#transaction-blocks {
+    clr-tabs {
+        .nav {
+            box-shadow: none !important;
+        }
+        button {
+            box-shadow: none;
+            outline: 0;
+        }
+        button:hover,
+        button:focus {
+            box-shadow: none;
+            background: rgb(236, 245, 254);
+        }
+    }
+}

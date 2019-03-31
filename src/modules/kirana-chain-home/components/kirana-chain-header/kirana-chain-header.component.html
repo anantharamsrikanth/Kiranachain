@@ -1,0 +1,160 @@
+<!-- Header component  -->
+<div class="clr-row">
+
+    <header class="header-6">
+        <div class="clr-col-2">
+            <div class="branding">
+                <a href="" class="nav-link">
+                    <clr-icon shape="vm-bug"></clr-icon>
+                    <span class="title">Kirana Chain</span>
+                </a>
+            </div>
+        </div>
+        <div class="clr-col-6">
+            <div class="clr-row">
+                <div class="clr-col-4">
+                    <div class="header-nav">
+                        <clr-dropdown>
+                            <span clrDropdownTrigger>
+                        Dropdown
+                        <clr-icon shape="caret down"></clr-icon>
+                    </span>
+                            <clr-dropdown-menu clrPosition="bottom-center" *clrIfOpen>
+                                <button type="button" clrDropdownItem>Wallet</button>
+                                <button type="button" clrDropdownItem>blockchain markets</button>
+                                <button type="button" clrDropdownItem>Lock box</button>
+                                <button type="button" clrDropdownItem>Developers</button>
+                            </clr-dropdown-menu>
+                        </clr-dropdown>
+                        <clr-dropdown>
+                            <span clrDropdownTrigger>
+                        Data
+                        <clr-icon shape="caret down"></clr-icon>
+                    </span>
+                            <clr-dropdown-menu clrPosition="bottom-center" *clrIfOpen>
+                                <button type="button" clrDropdownItem>Prices</button>
+                                <button type="button" clrDropdownItem>Charts</button>
+                                <button type="button" clrDropdownItem>Bitcoin Explorer</button>
+                                <button type="button" clrDropdownItem>Etherium explorer</button>
+                                <button type="button" clrDropdownItem>Bitcoin Cash explorer</button>
+                            </clr-dropdown-menu>
+                        </clr-dropdown>
+                    </div>
+                </div>
+                <div class="clr-col-4">
+                    <form class="search">
+                        <label for="search_input">
+                <input id="search_input" type="text" placeholder="Search for keywords...">
+            </label>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        <div class="clr-col-2">
+            <div class="header-actions">
+                <button class="btn btn-primary" (click)="isLoginSignupModalOpen=true;modalType='login'"> Login</button>
+                <button class="btn btn-primary" (click)="isLoginSignupModalOpen=true;modalType='signup'">Signup</button>
+
+            </div>
+        </div>
+
+    </header>
+</div>
+
+<clr-modal [(clrModalOpen)]="isLoginSignupModalOpen">
+
+    <div class="modal-body">
+
+        <div class="loginModal" *ngIf="modalType==='login'">
+            <div class="clr-row">
+                <div class="clr-col-6">
+                    <div>
+                        <h3>Welcome Back!</h3>
+                        <span>sign in to your wallet below</span>
+                    </div>
+                </div>
+                <div class="clr-col-6">
+                    <div class="text-right">
+                        <span>or</span>&nbsp;
+                        <span class="signup"><a (click)="modalType='signup'">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <form class="clr-form loginForm" [formGroup]="kiranaChainSignIn">
+                <clr-input-container>
+                    <label>Wllet ID</label>
+                    <input class="widthHundred" clrInput type="text" formControlName="walletId" />
+                    <clr-control-helper>Find the login link in your email, e.g. blockchain.info/wallet/1111-222-333... The series of numbers and dashes at the end of the link is your Wallet ID.</clr-control-helper>
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Password</label>
+                    <input class="widthHundred" clrInput type="password" formControlName="password" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+
+                <div class="submitButton">
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+
+                </div>
+            </form>
+            <div class="clr-row">
+                <div class="clr-col-4">
+                    <span><a href="#">Login via Mobile</a></span>
+                </div>
+                <div class="clr-col-8">
+                    <span>Having some trouble? <a href="">Get help logging in</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="signUpModal" *ngIf="modalType==='signup'">
+            <div class="clr-row">
+                <div class="clr-col-6">
+                    <div>
+                        <h3>Create Your Wallet</h3>
+                        <span>sign up for a free wallet below</span>
+                    </div>
+                </div>
+                <div class="clr-col-6">
+                    <div class="text-right">
+                        <span>or</span>&nbsp;
+                        <span class="signin"><a (click)="modalType='login'">Login</a></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <form class="clr-form loginForm" [formGroup]="kiranaChainSignUp">
+                <clr-input-container>
+                    <label>Email</label>
+                    <input clrInput class="widthHundred" type="email" formControlName="email" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Password</label>
+                    <input clrInput class="widthHundred" type="password" formControlName="password" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Confirm Password</label>
+                    <input clrInput class="widthHundred" type="password" formControlName="cpassword" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+
+                <clr-checkbox-wrapper>
+                    <input type="checkbox" clrCheckbox value="option2" name="options" />
+                    <label>I have read and agreed to the  <span><a href="">Terms of Service</a></span> & <span><a href=""> Privacy Policy</a></span>.</label>
+                </clr-checkbox-wrapper>
+
+                <div class="submitButton">
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</clr-modal>

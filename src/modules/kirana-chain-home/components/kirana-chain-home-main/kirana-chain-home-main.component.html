@@ -1,0 +1,96 @@
+<app-kirana-chain-header>
+</app-kirana-chain-header>
+<!-- main block -->
+<section class="main-block text-center color-white section">
+    <div class="clr-row">
+        <div class="clr-col-12">
+            <h1>KIRANA CHAIN</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="clr-row content">
+        <div class="clr-col-12">
+            <h3 class="p1">kirana Chain is the platform for online shoping and it will make more easy for customers.</h3>
+            <h3 class="p1">the main advantage with this platform is :it will connect customers directly with Shopers.using this platform without third party.</h3>
+            <h3 class="p1">
+                the seller himself can fix the prices for the. if any offers will directly send notification to customers.
+            </h3>
+        </div>
+    </div>
+</section>
+<section class="section" id="price-block">
+    <div class="clr-row text-center">
+        <div class="clr-col-12">
+            <h1>Price List</h1>
+            <hr>
+        </div>
+    </div>
+    <div class="clr-row text-center">
+        <div class="clr-col-lg-3 clr-col-12" *ngFor="let price of priceList">
+            <div class="card">
+                <div class="card-block">
+                    <div class="card-title">
+                        <h2>{{price.name}}</h2>
+                    </div>
+                    <div class="card-text">
+                        <h2>{{price.value}}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section id="transaction-blocks" class="section">
+    <clr-tabs>
+        <clr-tab>
+            <button clrTabLink>BLOCKS</button>
+            <ng-template [(clrIfActive)]="dashboardActive">
+                <clr-tab-content>
+                    <app-kirana-chain-blocks></app-kirana-chain-blocks>
+                </clr-tab-content>
+            </ng-template>
+        </clr-tab>
+
+        <clr-tab>
+            <button clrTabLink>TRANSACTIONS</button>
+            <ng-template [(clrIfActive)]="managementActive">
+                <clr-tab-content>
+                    <app-kirana-chain-transactions></app-kirana-chain-transactions>
+                </clr-tab-content>
+            </ng-template>
+        </clr-tab>
+    </clr-tabs>
+</section>
+<section id="explore-list" class="text-center section">
+    <div class="clr-row">
+        <div class="clr-col-12 explore-header">
+            <h1>Explore More With Digital Currencies</h1>
+        </div>
+    </div>
+    <div class="clr-row explore-items">
+        <div class="clr-col-3" *ngFor="let explore of exploreList">
+            <img src="{{explore.imageUrl}}" alt="wallet">
+            <h4><strong>{{explore.title}}</strong></h4>
+            <span class="p1">{{explore.content}}</span>
+            <div>
+                <a href="#">
+                    <h4>{{explore.link}}</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="kiranaChain-footer">
+    <div class="clr-row text-center">
+        <div class=" clr-col-12 copyright">
+            <span>cipyright &copy; 2019. Kirana Chain Pvt Ltd.</span>
+        </div>
+        <div class="clr-col-12 socialIcons">
+            <a href="#"><img src="../../../../assets/facebook.png" alt="facebook"></a>
+            <a href="#"><img src="../../../../assets/linkedin.svg" alt="facebook"></a>
+            <a href="#"><img src="../../../../assets/twittericon.svg" alt="facebook"></a>
+        </div>
+
+    </div>
+</section>

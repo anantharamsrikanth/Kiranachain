@@ -1,0 +1,19 @@
+<clr-datagrid>
+    <clr-dg-column>Transaction Hash</clr-dg-column>
+    <clr-dg-column>Age</clr-dg-column>
+    <clr-dg-column>Amount(BTC)</clr-dg-column>
+    <clr-dg-column>Amount(USD)</clr-dg-column>
+
+    <clr-dg-row *ngFor="let block of blocks">
+        <clr-dg-cell>{{block.height}}</clr-dg-cell>
+
+        <clr-dg-cell>{{block.age}}</clr-dg-cell>
+
+        <clr-dg-cell>{{block.transactions}}</clr-dg-cell>
+
+        <clr-dg-cell>{{block.miner}}</clr-dg-cell>
+
+        <clr-dg-cell>{{block.size}}</clr-dg-cell>
+
+    </clr-dg-row>
+</clr-datagrid>

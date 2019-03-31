@@ -1,0 +1,47 @@
+header {
+    background: linear-gradient(90deg, rgb(0, 4, 40) 0%, rgb(0, 52, 109) 100%);
+    width: 100%;
+    .header-nav {
+        clr-dropdown span {
+            line-height: 2.5rem;
+            margin-left: 2.5rem;
+            color: white;
+        }
+    }
+    .header-actions {
+        button {
+            padding: 3px;
+            margin-top: 0.5rem;
+            background-color: rgba(255, 165, 0, 0.7);
+            margin-left: 1.5rem;
+            color: white;
+            border-style: none;
+            outline: none;
+            border-radius: 0.255rem;
+            transition: all 1s;
+            cursor: pointer;
+        }
+        button:hover {
+            box-shadow: 1px 5px 1px 0px black;
+        }
+    }
+}
+
+clr-modal {
+    .loginModal .signup,
+    .signUpModal .signin {
+        color: rgb(16, 173, 228);
+        cursor: pointer;
+    }
+}
+
+.clr-form {
+    clr-checkbox-wrapper {
+        label {
+            margin-top: 0.5rem;
+        }
+    }
+    .submitButton {
+        margin-top: 1rem;
+    }
+}

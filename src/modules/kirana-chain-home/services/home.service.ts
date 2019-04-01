@@ -10,7 +10,16 @@ export class HomeService {
 
    }
 
-  public getPriceList():any{
-     return this.http.get('../price-list.json');
-   }
+  public getPriceList():any {
+
+    return this.http.get('../../assets/mockdata/price-list.json');
+
+  }
+
+  public getExploreList():any {
+
+    return this.http.get('../../assets/mockdata/explore-list.json');
+
+  }
+
 }

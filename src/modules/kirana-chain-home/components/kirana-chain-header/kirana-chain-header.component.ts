@@ -7,8 +7,15 @@ import {FormGroup, FormControl, Validators} from "@angular/forms";
   styleUrls: ['./kirana-chain-header.component.scss']
 })
 export class KiranaChainHeaderComponent implements OnInit {
+public isLoginSignupModalOpen : boolean;
+public modalType:string='';
 
-  constructor() { }
+constructor() { 
+
+    this.isLoginSignupModalOpen =  false;
+
+  }
+  
   kiranaChainSignIn = new FormGroup({
     walletId: new FormControl(''),
     password: new FormControl(''), 

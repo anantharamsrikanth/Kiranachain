@@ -45,7 +45,7 @@
     <clr-tabs>
         <clr-tab>
             <button clrTabLink>BLOCKS</button>
-            <ng-template [(clrIfActive)]="dashboardActive">
+            <ng-template [(clrIfActive)]="isBlockActive">
                 <clr-tab-content>
                     <app-kirana-chain-blocks></app-kirana-chain-blocks>
                 </clr-tab-content>
@@ -54,7 +54,7 @@
 
         <clr-tab>
             <button clrTabLink>TRANSACTIONS</button>
-            <ng-template [(clrIfActive)]="managementActive">
+            <ng-template [(clrIfActive)]="isTransactionActive">
                 <clr-tab-content>
                     <app-kirana-chain-transactions></app-kirana-chain-transactions>
                 </clr-tab-content>

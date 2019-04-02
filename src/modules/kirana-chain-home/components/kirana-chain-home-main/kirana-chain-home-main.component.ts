@@ -11,7 +11,7 @@ export class KiranaChainHomeMainComponent implements OnInit {
  public isBlockActive: boolean;
  public isTransactionActive: boolean;
  public isLoginModalOpen:boolean=false;
- public priceList:any = [];
+ public homeData:any = '';
  public exploreList:any = [];
 
   constructor(private priceService:HomeService) { 
@@ -22,7 +22,7 @@ export class KiranaChainHomeMainComponent implements OnInit {
 
     this.getPriceList();
 
-    this.getExploreList();
+    // this.getExploreList();
 
 }
 
@@ -30,24 +30,22 @@ private getPriceList(): void{
 
   this.priceService.getPriceList().subscribe((data:Response)=>{
 
-    this.priceList = data;
-
-    console.log(this.priceList);
+    this.homeData = data;
 
   })
 
 }
 
-public getExploreList(): void {
+// public getExploreList(): void {
 
-  this.priceService.getExploreList().subscribe((data:Response)=>{
+//   this.priceService.getExploreList().subscribe((data:Response)=>{
 
-    this.exploreList = data;
+//     this.exploreList = data;
 
-    console.log(this.exploreList);
+//     console.log(this.exploreList);
 
-  })
+//   })
 
-}
+// }
 
 }

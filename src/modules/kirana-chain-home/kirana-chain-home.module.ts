@@ -16,6 +16,7 @@ import { KiranaChainTransactionsComponent } from './components/kirana-chain-tran
 
 import { HomeService } from './services/home.service';
 import { from } from 'rxjs';
+import { KiranaChainBlockDetailComponent } from './components/kirana-chain-block-detail/kirana-chain-block-detail.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { from } from 'rxjs';
    KiranaChainHeaderComponent,
    KiranaChainHomeMainComponent,
    KiranaChainBlocksComponent,
-   KiranaChainTransactionsComponent
+   KiranaChainTransactionsComponent,
+   KiranaChainBlockDetailComponent
   ],
   imports: [
     ReactiveFormsModule,

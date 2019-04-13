@@ -1,12 +1,15 @@
+<!-- blocks tab -->
 <clr-datagrid>
     <clr-dg-column>Transaction Hash</clr-dg-column>
+    <clr-dg-column style="border:none"></clr-dg-column>
+
     <clr-dg-column>Age</clr-dg-column>
     <clr-dg-column>Amount(BTC)</clr-dg-column>
     <clr-dg-column>Amount(USD)</clr-dg-column>
 
     <clr-dg-row *ngFor="let transacion of transactions">
-        <clr-dg-cell>{{transacion.transactionId}}</clr-dg-cell>
-
+        <clr-dg-cell><a [routerLink]="['/detail' , 6]"> {{transacion.transactionId}}</a></clr-dg-cell>
+        <clr-dg-cell></clr-dg-cell>
         <clr-dg-cell>{{transacion.age}}</clr-dg-cell>
 
         <clr-dg-cell>{{transacion.amountBtc}}</clr-dg-cell>

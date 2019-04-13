@@ -25,10 +25,14 @@ export class KiranaChainHomeMainComponent implements OnInit {
     // this.getExploreList();
 
 }
-
+/**
+ * 
+ * Get the data for pricelist and explorelist.
+ * 
+ */
 private getPriceList(): void{
 
-  this.priceService.getPriceList().subscribe((data:Response)=>{
+  this.priceService.getPriceList().subscribe((data:any)=>{
 
     this.homeData = data;
 

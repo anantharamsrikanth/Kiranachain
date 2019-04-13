@@ -47,6 +47,7 @@
 }
 
 #transaction-blocks {
+    background-color: #f0f2f7;
     clr-tabs {
         .nav {
             box-shadow: none !important;
@@ -58,7 +59,7 @@
         button:hover,
         button:focus {
             box-shadow: none;
-            background: rgb(236, 245, 254);
+            background: rgba(255, 165, 0, 0.7);
         }
     }
 }

@@ -4,8 +4,8 @@
 <section class="main-block text-center color-white section">
     <div class="clr-row">
         <div class="clr-col-12">
-            <h1>KIRANA CHAIN</h1>
-            <hr>
+            <h1 class="animated fadeInDown">KIRANA CHAIN</h1>
+            <hr class="fadeInLeftBig">
         </div>
     </div>
     <div class="clr-row content">
@@ -18,6 +18,8 @@
         </div>
     </div>
 </section>
+
+<!-- Price list -->
 <section class="section" id="price-block">
     <div class="clr-row text-center">
         <div class="clr-col-12">
@@ -26,7 +28,7 @@
         </div>
     </div>
     <div class="clr-row text-center">
-        <div class="clr-col-lg-3 clr-col-12" *ngFor="let price of homeData.data.priceList">
+        <div class="clr-col-lg-3 clr-col-12" *ngFor="let price of homeData?.data?.priceList">
             <div class="card">
                 <div class="card-block">
                     <div class="card-title">
@@ -39,8 +41,9 @@
             </div>
         </div>
     </div>
-
 </section>
+
+<!-- Transactions list -->
 <section id="transaction-blocks" class="section">
     <clr-tabs>
         <clr-tab>
@@ -62,6 +65,8 @@
         </clr-tab>
     </clr-tabs>
 </section>
+
+<!-- Explore list -->
 <section id="explore-list" class="text-center section">
     <div class="clr-row">
         <div class="clr-col-12 explore-header">
@@ -69,7 +74,7 @@
         </div>
     </div>
     <div class="clr-row explore-items">
-        <div class="clr-col-3" *ngFor="let explore of homeData.data.explorelist">
+        <div class="clr-col-3" *ngFor="let explore of homeData?.data?.explorelist">
             <img src="{{explore.imageUrl}}" alt="wallet">
             <h4><strong>{{explore.title}}</strong></h4>
             <span class="p1">{{explore.content}}</span>
@@ -81,6 +86,8 @@
         </div>
     </div>
 </section>
+
+<!-- Footer -->
 <section id="kiranaChain-footer">
     <div class="clr-row text-center">
         <div class=" clr-col-12 copyright">

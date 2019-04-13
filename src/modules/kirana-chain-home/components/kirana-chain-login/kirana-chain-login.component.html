@@ -1,0 +1,49 @@
+<clr-modal [(clrModalOpen)]="isSignInModalOpen" (clrModalOpenChange)="closeModal($event)">
+    <div class="modal-body">
+        <div class="loginModal">
+            <div class="clr-row">
+                <div class="clr-col-6">
+                    <div>
+                        <h3>Welcome Back!</h3>
+                        <span>sign in to your wallet below</span>
+                    </div>
+                </div>
+                <div class="clr-col-6">
+                    <div class="text-right">
+                        <span>or</span>&nbsp;
+                        <span class="signup"><a (click)="closeModal(false,'GO_TO_SIGNUP'); isLoginSignupModalOpen = true">Sign Up</a></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <form class="clr-form loginForm" [formGroup]="kiranaChainSignIn">
+                <clr-input-container>
+                    <label>Wllet ID</label>
+                    <input class="widthHundred" clrInput type="text" formControlName="walletId" />
+                    <clr-control-helper>Find the login link in your email, e.g. blockchain.info/wallet/1111-222-333... The series of numbers and dashes at the end of the link is your Wallet ID.</clr-control-helper>
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Password</label>
+                    <input class="widthHundred" clrInput type="password" formControlName="password" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+
+                <div class="submitButton">
+                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
+
+                </div>
+            </form>
+            <div class="clr-row">
+                <div class="clr-col-4">
+                    <span><a href="#">Login via Mobile</a></span>
+                </div>
+                <div class="clr-col-8">
+                    <span>Having some trouble? <a href="">Get help logging in</a></span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</clr-modal>

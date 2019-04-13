@@ -11,12 +11,15 @@ import { ClarityModule } from '@clr/angular';
 import { ReactiveFormsModule } from '@angular/forms';
 import { KiranaChainBlocksComponent } from './components/kirana-chain-blocks/kirana-chain-blocks.component';
 import { KiranaChainTransactionsComponent } from './components/kirana-chain-transactions/kirana-chain-transactions.component';
-
 // services
 
 import { HomeService } from './services/home.service';
+import { Location } from '@angular/common';
 import { from } from 'rxjs';
+
 import { KiranaChainBlockDetailComponent } from './components/kirana-chain-block-detail/kirana-chain-block-detail.component';
+import { KiranaChainLoginComponent } from './components/kirana-chain-login/kirana-chain-login.component';
+import { KiranaChainSignupComponent } from './components/kirana-chain-signup/kirana-chain-signup.component';
 
 
 @NgModule({
@@ -25,7 +28,9 @@ import { KiranaChainBlockDetailComponent } from './components/kirana-chain-block
    KiranaChainHomeMainComponent,
    KiranaChainBlocksComponent,
    KiranaChainTransactionsComponent,
-   KiranaChainBlockDetailComponent
+   KiranaChainBlockDetailComponent,
+   KiranaChainLoginComponent,
+   KiranaChainSignupComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -35,7 +40,8 @@ import { KiranaChainBlockDetailComponent } from './components/kirana-chain-block
     KiranaChainHomeRoutingModule,
     BrowserAnimationsModule,
     ClarityModule
+    
   ],
-  providers: [HomeService]
+  providers: [HomeService,Location]
 })
 export class KiranaChainHomeModule { }

@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
 const routes: Routes = [
-  {path:'home', loadChildren: "../modules/kirana-chain-home/kirana-chain-home.module#KiranaChainHomeModule"},
-  {path:'', redirectTo:'home', pathMatch: 'full'}
+  {path:'', redirectTo:'home', pathMatch: 'full'},
+  {path:'home', loadChildren: "../modules/kirana-chain-home/kirana-chain-home.module#KiranaChainHomeModule"}
 ];
 
 @NgModule({

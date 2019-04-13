@@ -1,0 +1,52 @@
+<clr-modal [(clrModalOpen)]="isSignupModalOpen" (clrModalOpenChange)="closeModal($event)">
+    <div class="modal-body">
+        <div class="signUpModal">
+            <div class="clr-row">
+                <div class="clr-col-6">
+                    <div>
+                        <h3>Create Your Wallet</h3>
+                        <span>sign up for a free wallet below</span>
+                    </div>
+                </div>
+                <div class="clr-col-6">
+                    <div class="text-right">
+                        <span>or</span>&nbsp;
+                        <span class="signin"><a (click)="closeModal(false,'GO_TO_SIGNIN'); isLoginSignInModalOpen=true">Login</a></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <form class="clr-form loginForm" [formGroup]="kiranaChainSignUp">
+                <clr-input-container>
+                    <label>Email</label>
+                    <input clrInput class="widthHundred" type="email" formControlName="email" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Password</label>
+                    <input clrInput class="widthHundred" type="password" formControlName="password" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+                <clr-input-container>
+                    <label>Confirm Password</label>
+                    <input clrInput class="widthHundred" type="password" formControlName="cpassword" />
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
+
+                <clr-checkbox-wrapper>
+                    <input type="checkbox" clrCheckbox value="option2" name="options" />
+                    <label>I have read and agreed to the  <span><a href="">Terms of Service</a></span> & <span><a href=""> Privacy Policy</a></span>.</label>
+                </clr-checkbox-wrapper>
+
+                <div class="submitButton">
+                    <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</clr-modal>
+<app-kirana-chain-login *ngIf="isLoginSignInModalOpen" [(isSignInModalOpen)]="isLoginSignInModalOpen"></app-kirana-chain-login>

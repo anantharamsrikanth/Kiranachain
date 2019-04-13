@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +11,32 @@ export class HomeService {
 
    }
 
-  public getPriceList():any {
+/**
+ * 
+ * Getting pricelist and explorelist data.
+ * 
+ */
+  public getPriceList():Observable<any> {
 
     return this.http.get('../../assets/mockdata/price-list.json');
 
   }
 
-  public getExploreList():any {
+/**
+ * 
+ * Getting pricelist and explorelist data.
+ * 
+ */
+public getBlockDetail():Observable<any> {
 
-    return this.http.get('../../assets/mockdata/explore-list.json');
+  return this.http.get('../../assets/mockdata/price-list.json');
 
-  }
+}
+
+  // public getExploreList():any {
+
+  //   return this.http.get('../../assets/mockdata/explore-list.json');
+
+  // }
 
 }

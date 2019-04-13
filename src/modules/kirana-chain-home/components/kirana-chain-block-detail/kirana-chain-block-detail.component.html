@@ -1,3 +1,116 @@
-<p>
-    kirana-chain-block-detail works!
-</p>
+<section class="section">
+
+    <button (click)="gotoPreviousPage()">Back</button>
+
+    <div class="clr-row">
+        <strong>Block</strong><span>#647574</span>
+    </div>
+    <clr-tabs>
+        <clr-tab>
+            <button clrTabLink>Overview</button>
+            <ng-template [(clrIfActive)]="isBlockActive">
+                <clr-tab-content>
+
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Time stamp:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>14 days 21 hrs ago</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Transactions:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>62 transactions and 10 contract internal transactions in this block</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Mind by</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>2.053260421825848327 Ether (2 + 0.053260421825848327)</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+                    <div class="clr-row">
+                        <div class="clr-col-2">
+                            <p>Block Height:</p>
+                        </div>
+                        <div class="clr-col-10">
+                            <p>647574</p>
+                        </div>
+                    </div>
+
+                </clr-tab-content>
+            </ng-template>
+        </clr-tab>
+
+        <clr-tab>
+            <button clrTabLink>Commnets</button>
+            <ng-template [(clrIfActive)]="isCommentsActive">
+                <clr-tab-content>
+                    <p>comments</p>
+                </clr-tab-content>
+            </ng-template>
+        </clr-tab>
+    </clr-tabs>
+</section>

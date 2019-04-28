@@ -16,7 +16,13 @@
                 </div>
             </div>
             <hr>
-            <form class="clr-form loginForm" [formGroup]="kiranaChainSignIn">
+            <form class="clr-form loginForm" [formGroup]="kiranaChainSignIn" (ngSubmit)="onSubmit()">
+                <clr-input-container>
+                    <label>Wllet ID</label>
+                    <input class="widthHundred" clrInput type="text" formControlName="walletId" />
+                    <clr-control-helper>Find the login link in your email, e.g. blockchain.info/wallet/1111-222-333... The series of numbers and dashes at the end of the link is your Wallet ID.</clr-control-helper>
+                    <clr-control-error>Error message that appears after focus is lost and control is invalid</clr-control-error>
+                </clr-input-container>
                 <clr-input-container>
                     <label>Wllet ID</label>
                     <input class="widthHundred" clrInput type="text" formControlName="walletId" />

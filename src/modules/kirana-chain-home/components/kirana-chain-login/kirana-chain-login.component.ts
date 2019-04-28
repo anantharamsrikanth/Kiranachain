@@ -16,6 +16,7 @@ export class KiranaChainLoginComponent implements OnInit {
   constructor() { 
 
     this.kiranaChainSignIn = new FormGroup({
+      options: new FormControl('', Validators.required),
       walletId: new FormControl('', Validators.required),
       password: new FormControl('', Validators.required), 
     });
@@ -23,6 +24,9 @@ export class KiranaChainLoginComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+  public onSubmit(){
+    console.log(this.kiranaChainSignIn);
   }
   public closeModal(status:boolean, navigateTo?: string){
     let Obj : any = {

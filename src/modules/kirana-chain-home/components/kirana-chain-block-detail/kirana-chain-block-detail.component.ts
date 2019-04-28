@@ -8,26 +8,24 @@ import { HomeService } from '../../services/home.service';
 })
 export class KiranaChainBlockDetailComponent implements OnInit {
 
-  constructor(private location: Location, private priceService:HomeService) { }
+  constructor(private location: Location, private priceService: HomeService) { }
   public isCommentsActive: boolean;
   public isBlockActive: boolean;
-  public blocks:any = [];
+  public blocks: any = [];
 
   ngOnInit() {
     this.blockDetails();
   }
 
-/**
- * 
+/** 
  * Get the data for pricelist and explorelist.
- * 
  */
 private blockDetails(): void{
 
   this.priceService.getBlockDetail().subscribe((data:any)=>{
 
     this.blocks = data;
-    console.log(this.blocks);
+    // console.log(this.blocks);
 
   })
 

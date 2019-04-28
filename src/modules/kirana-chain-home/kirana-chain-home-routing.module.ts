@@ -4,17 +4,20 @@ import { KiranaChainHomeMainComponent } from './components/kirana-chain-home-mai
 import { KiranaChainBlockDetailComponent } from './components/kirana-chain-block-detail/kirana-chain-block-detail.component';
 import { KiranaChainLoginComponent } from '../kirana-chain-home/components/kirana-chain-login/kirana-chain-login.component';
 import { KiranaChainSignupComponent } from '../kirana-chain-home/components/kirana-chain-signup/kirana-chain-signup.component';
+import { KiranaChainMainPageComponent } from './components/kirana-chain-main-page/kirana-chain-main-page.component';
 
 const routes: Routes = [
   {
-    path: 'home', component: KiranaChainHomeMainComponent,
+    path: '', component: KiranaChainMainPageComponent,
     children: [
+      {path:'home', component: KiranaChainHomeMainComponent},
       { path: 'login', component: KiranaChainLoginComponent },
-      { path: 'signup', component: KiranaChainSignupComponent }
+      { path: 'signup', component: KiranaChainSignupComponent },
+      { path: 'detail/:id', component: KiranaChainBlockDetailComponent },
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   },
-  { path: 'detail/:id', component: KiranaChainBlockDetailComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' }
+  { path: '', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

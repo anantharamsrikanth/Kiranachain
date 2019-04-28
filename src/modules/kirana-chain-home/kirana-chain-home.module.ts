@@ -20,6 +20,7 @@ import { from } from 'rxjs';
 import { KiranaChainBlockDetailComponent } from './components/kirana-chain-block-detail/kirana-chain-block-detail.component';
 import { KiranaChainLoginComponent } from './components/kirana-chain-login/kirana-chain-login.component';
 import { KiranaChainSignupComponent } from './components/kirana-chain-signup/kirana-chain-signup.component';
+import { KiranaChainMainPageComponent } from './components/kirana-chain-main-page/kirana-chain-main-page.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { KiranaChainSignupComponent } from './components/kirana-chain-signup/kir
    KiranaChainTransactionsComponent,
    KiranaChainBlockDetailComponent,
    KiranaChainLoginComponent,
-   KiranaChainSignupComponent
+   KiranaChainSignupComponent,
+   KiranaChainMainPageComponent
   ],
   imports: [
     ReactiveFormsModule,
